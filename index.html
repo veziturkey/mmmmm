@@ -1069,13 +1069,13 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="fullName">الاسم الثلاثي *</label>
-                            <input type="text" id="fullName" class="form-control" placeholder="أدخل الاسم الثلاثي" required>
+                            <label for="fullName">الاسم الرباعي *</label>
+                            <input type="text" id="fullName" class="form-control" placeholder="أدخل الاسم الرباعي" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="motherName">اسم الأم *</label>
-                            <input type="text" id="motherName" class="form-control" placeholder="أدخل اسم الأم" required>
+                            <label for="motherName">اسم الأم الثلاثي *</label>
+                            <input type="text" id="motherName" class="form-control" placeholder="أدخل اسم الأم الثلاثي" required>
                         </div>
                     </div>
                     
@@ -1121,35 +1121,27 @@
                             </select>
                         </div>
                         
-                        <div class="form-group modern-select-wrapper">
+                        <div class="form-group">
                             <label for="district">القضاء / الناحية *</label>
-                            <select id="district" class="form-control" required>
-                                <option value="">اختر القضاء أو الناحية</option>
-                                <option value="الكرخ">الكرخ</option>
-                                <option value="الرصافة">الرصافة</option>
-                                <option value="الثورة">الثورة</option>
-                                <option value="الشعلة">الشعلة</option>
-                                <option value="الحسينية">الحسينية</option>
-                                <option value="الجعفري">الجعفري</option>
-                                <option value="الكرامة">الكرامة</option>
-                                <option value="النهضة">النهضة</option>
-                                <option value="العباسية">العباسية</option>
-                                <option value="الراشدية">الراشدية</option>
-                            </select>
+                            <input type="text" id="district" class="form-control" placeholder="أدخل القضاء أو الناحية" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="phone">رقم الهاتف *</label>
-                            <input type="tel" id="phone" class="form-control" placeholder="07xxxxxxxxx" pattern="07[0-9]{9}" required>
-                            <small style="color: #777; font-size: 0.85rem;">تنسيق رقم عراقي: 07xxxxxxxxx (11 رقم)</small>
+                            <label for="phone1">رقم الهاتف (1) *</label>
+                            <input type="tel" id="phone1" class="form-control" placeholder="07xxxxxxxxx" pattern="07[0-9]{9}" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">بريد إلكتروني (إن وجد)</label>
-                            <input type="email" id="email" class="form-control" placeholder="example@email.com">
+                            <label for="phone2">رقم الهاتف (2)</label>
+                            <input type="tel" id="phone2" class="form-control" placeholder="07xxxxxxxxx" pattern="07[0-9]{9}">
                         </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="landmark">أقرب نقطة دالة *</label>
+                        <input type="text" id="landmark" class="form-control" placeholder="مثال: قرب جامع الحبوبي، مقابل مدرسة..." required>
                     </div>
                 </div>
                 
@@ -1159,96 +1151,118 @@
                     
                     <div class="form-row">
                         <div class="form-group modern-select-wrapper">
-                            <label for="disabilityType">نوع الإعاقة *</label>
+                            <label for="disabilityType">نوع العوق *</label>
                             <select id="disabilityType" class="form-control" required>
-                                <option value="">اختر نوع الإعاقة</option>
+                                <option value="">اختر نوع العوق</option>
                                 <option value="حركية">حركية</option>
                                 <option value="سمعية">سمعية</option>
                                 <option value="بصرية">بصرية</option>
                                 <option value="ذهنية">ذهنية</option>
                                 <option value="نفسية">نفسية</option>
                                 <option value="توحد">توحد</option>
-                                <option value="إعاقات متعددة">إعاقات متعددة</option>
+                                <option value="أخرى">أخرى</option>
                             </select>
                         </div>
                         
-                        <div class="form-group modern-select-wrapper">
-                            <label for="disabilityLevel">درجة الإعاقة *</label>
-                            <select id="disabilityLevel" class="form-control" required>
-                                <option value="">اختر درجة الإعاقة</option>
-                                <option value="بسيطة">بسيطة</option>
-                                <option value="متوسطة">متوسطة</option>
-                                <option value="شديدة">شديدة</option>
-                            </select>
+                        <div class="form-group">
+                            <label for="disabilityLevel">درجة العوق (رقم) *</label>
+                            <input type="number" id="disabilityLevel" class="form-control" placeholder="أدخل درجة العوق رقمياً" min="1" max="100" required>
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group modern-select-wrapper">
-                            <label for="disabilityAcquired">هل الإعاقة *</label>
+                            <label for="disabilityAcquired">هل العوق *</label>
                             <select id="disabilityAcquired" class="form-control" required>
                                 <option value="">اختر الحالة</option>
                                 <option value="منذ الولادة">منذ الولادة</option>
                                 <option value="مكتسبة">مكتسبة</option>
                             </select>
                         </div>
-                        
-                        <div class="form-group modern-select-wrapper">
-                            <label for="hasDisabilityCard">هل لديك بطاقة ذوي الإعاقة؟ *</label>
-                            <select id="hasDisabilityCard" class="form-control" required>
-                                <option value="">اختر الإجابة</option>
-                                <option value="نعم">نعم</option>
-                                <option value="لا">لا</option>
-                            </select>
-                        </div>
                     </div>
                 </div>
                 
-                <!-- ثالثاً: الحالة الصحية -->
+                <!-- ثالثاً: معلومات الراتب -->
                 <div class="form-section">
-                    <h2><i class="fas fa-heartbeat"></i> <span class="section-number">3</span> الحالة الصحية</h2>
-                    
-                    <div class="form-row">
-                        <div class="form-group modern-select-wrapper">
-                            <label for="needsTreatment">هل تحتاج إلى علاج دوري؟ *</label>
-                            <select id="needsTreatment" class="form-control" required>
-                                <option value="">اختر الإجابة</option>
-                                <option value="نعم">نعم</option>
-                                <option value="لا">لا</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group modern-select-wrapper">
-                            <label for="usesAssistiveDevices">هل تستخدم أجهزة مساعدة؟ *</label>
-                            <select id="usesAssistiveDevices" class="form-control" required>
-                                <option value="">اختر الإجابة</option>
-                                <option value="نعم">نعم</option>
-                                <option value="لا">لا</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="conditional-section" id="assistiveDevicesSection" style="display: none;">
-                        <h3><i class="fas fa-tools"></i> تفاصيل الأجهزة المساعدة</h3>
-                        <div class="form-group">
-                            <label for="assistiveDevices">اذكر الأجهزة المساعدة المستخدمة</label>
-                            <input type="text" id="assistiveDevices" class="form-control" placeholder="مثل: كرسي متحرك، سماعة طبية، نظارة طبية...">
-                        </div>
-                    </div>
+                    <h2><i class="fas fa-money-bill-wave"></i> <span class="section-number">3</span> معلومات الراتب والوضع الوظيفي</h2>
                     
                     <div class="form-group modern-select-wrapper">
-                        <label for="needsCompanion">هل تحتاج إلى مرافق دائم؟ *</label>
-                        <select id="needsCompanion" class="form-control" required>
+                        <label for="hasWelfareSalary">هل لديك راتب رعاية؟ *</label>
+                        <select id="hasWelfareSalary" class="form-control" required>
                             <option value="">اختر الإجابة</option>
                             <option value="نعم">نعم</option>
                             <option value="لا">لا</option>
                         </select>
                     </div>
+                    
+                    <div class="conditional-section" id="welfareSalarySection" style="display: none;">
+                        <div class="form-group">
+                            <label for="welfareSalaryReason">سبب عدم الحصول على راتب الرعاية *</label>
+                            <textarea id="welfareSalaryReason" class="form-control" placeholder="أذكر سبب عدم حصولك على راتب الرعاية" rows="3"></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group modern-select-wrapper">
+                        <label for="hasSpecificSalary">هل لديك راتب معين؟ *</label>
+                        <select id="hasSpecificSalary" class="form-control" required>
+                            <option value="">اختر الإجابة</option>
+                            <option value="نعم">نعم</option>
+                            <option value="لا">لا</option>
+                        </select>
+                    </div>
+                    
+                    <div class="conditional-section" id="specificSalarySection" style="display: none;">
+                        <div class="form-group">
+                            <label for="specificSalaryReason">سبب عدم الحصول على راتب معين *</label>
+                            <textarea id="specificSalaryReason" class="form-control" placeholder="أذكر سبب عدم حصولك على راتب معين" rows="3"></textarea>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- رابعاً: الحالة الاجتماعية والاقتصادية -->
+                <!-- رابعاً: العلاقة والوصاية -->
                 <div class="form-section">
-                    <h2><i class="fas fa-users"></i> <span class="section-number">4</span> الحالة الاجتماعية والاقتصادية</h2>
+                    <h2><i class="fas fa-users"></i> <span class="section-number">4</span> العلاقة والوصاية</h2>
+                    
+                    <div class="form-group modern-select-wrapper">
+                        <label for="relationshipDegree">درجة القرابة *</label>
+                        <select id="relationshipDegree" class="form-control" required>
+                            <option value="">اختر درجة القرابة</option>
+                            <option value="أب">أب</option>
+                            <option value="أم">أم</option>
+                            <option value="أخ">أخ</option>
+                            <option value="أخت">أخت</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointedName">اسم المعين *</label>
+                        <input type="text" id="appointedName" class="form-control" placeholder="اسم الشخص المسؤول عن تقديم الطلب" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group modern-select-wrapper">
+                            <label for="isEmployee">هل أنت موظف؟ *</label>
+                            <select id="isEmployee" class="form-control" required>
+                                <option value="">اختر الإجابة</option>
+                                <option value="نعم">نعم</option>
+                                <option value="لا">لا</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group modern-select-wrapper">
+                            <label for="isRetired">هل أنت متقاعد؟ *</label>
+                            <select id="isRetired" class="form-control" required>
+                                <option value="">اختر الإجابة</option>
+                                <option value="نعم">نعم</option>
+                                <option value="لا">لا</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- خامساً: الحالة الاجتماعية والتعليمية -->
+                <div class="form-section">
+                    <h2><i class="fas fa-user-graduate"></i> <span class="section-number">5</span> الحالة الاجتماعية والتعليمية</h2>
                     
                     <div class="form-row">
                         <div class="form-group modern-select-wrapper">
@@ -1263,64 +1277,15 @@
                         </div>
                         
                         <div class="form-group modern-select-wrapper">
-                            <label for="currentlyWorking">هل تعمل حاليًا؟ *</label>
-                            <select id="currentlyWorking" class="form-control" required>
-                                <option value="">اختر الإجابة</option>
-                                <option value="نعم">نعم</option>
-                                <option value="لا">لا</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group modern-select-wrapper">
-                            <label for="hasIncome">هل لديك مصدر دخل ثابت؟ *</label>
-                            <select id="hasIncome" class="form-control" required>
-                                <option value="">اختر الإجابة</option>
-                                <option value="نعم">نعم</option>
-                                <option value="لا">لا</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="familyMembers">عدد أفراد الأسرة *</label>
-                            <input type="number" id="familyMembers" class="form-control" min="1" max="50" placeholder="أدخل عدد أفراد الأسرة" required>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- خامساً: المستوى التعليمي والمهني -->
-                <div class="form-section">
-                    <h2><i class="fas fa-graduation-cap"></i> <span class="section-number">5</span> المستوى التعليمي والمهني</h2>
-                    
-                    <div class="form-row">
-                        <div class="form-group modern-select-wrapper">
-                            <label for="educationLevel">المستوى الدراسي *</label>
+                            <label for="educationLevel">المستوى التعليمي *</label>
                             <select id="educationLevel" class="form-control" required>
-                                <option value="">اختر المستوى الدراسي</option>
+                                <option value="">اختر المستوى التعليمي</option>
                                 <option value="أمي">أمي</option>
                                 <option value="ابتدائي">ابتدائي</option>
                                 <option value="متوسط">متوسط</option>
                                 <option value="إعدادي">إعدادي</option>
                                 <option value="جامعي">جامعي</option>
                             </select>
-                        </div>
-                        
-                        <div class="form-group modern-select-wrapper">
-                            <label for="wantsToWork">هل ترغب بالعمل؟ *</label>
-                            <select id="wantsToWork" class="form-control" required>
-                                <option value="">اختر الإجابة</option>
-                                <option value="نعم">نعم</option>
-                                <option value="لا">لا</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="conditional-section">
-                        <h3><i class="fas fa-briefcase"></i> تفاصيل العمل</h3>
-                        <div class="form-group">
-                            <label for="suitableWork">نوع العمل المناسب لك (إن وجد)</label>
-                            <textarea id="suitableWork" class="form-control" placeholder="اذكر نوع العمل المناسب لك حسب قدراتك وإمكانياتك"></textarea>
                         </div>
                     </div>
                 </div>
@@ -1343,19 +1308,21 @@
                             <option value="مساعد شخصي">مساعد شخصي</option>
                         </select>
                     </div>
+                </div>
+                
+                <!-- سابعاً: ملاحظات -->
+                <div class="form-section">
+                    <h2><i class="fas fa-edit"></i> <span class="section-number">7</span> ملاحظات</h2>
                     
-                    <div class="conditional-section">
-                        <h3><i class="fas fa-comments"></i> تفاصيل إضافية عن الدعم المطلوب</h3>
-                        <div class="form-group">
-                            <label for="supportDetails">ملاحظات إضافية حول الدعم المطلوب</label>
-                            <textarea id="supportDetails" class="form-control" placeholder="يمكنك ذكر أي تفاصيل إضافية حول الدعم الذي تحتاجه"></textarea>
-                        </div>
+                    <div class="form-group">
+                        <label for="additionalNotes">ملاحظات إضافية</label>
+                        <textarea id="additionalNotes" class="form-control" rows="4" placeholder="أي ملاحظات إضافية تود إضافتها حول حالتك أو احتياجاتك الخاصة"></textarea>
                     </div>
                 </div>
                 
-                <!-- رفع الوثائق والمستمسكات -->
+                <!-- ثامناً: رفع الوثائق -->
                 <div class="form-section">
-                    <h2><i class="fas fa-file-upload"></i> <span class="section-number">7</span> رفع الوثائق والمستمسكات</h2>
+                    <h2><i class="fas fa-file-upload"></i> <span class="section-number">8</span> رفع الوثائق والمستمسكات</h2>
                     
                     <div class="upload-section">
                         <div class="upload-container">
@@ -1427,21 +1394,6 @@
                                 <div class="file-preview" id="additionalDocsPreview"></div>
                             </div>
                         </div>
-                        
-                        <div class="alert alert-info" style="margin-top: 20px;">
-                            <i class="fas fa-info-circle"></i> 
-                            <strong>ملاحظة مهمة:</strong> يرجى التأكد من أن الصور واضحة ويمكن قراءة جميع البيانات بوضوح. الحجم الأقصى للملف 5MB لكل صورة.
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- ثامناً: ملاحظات إضافية -->
-                <div class="form-section">
-                    <h2><i class="fas fa-edit"></i> <span class="section-number">8</span> ملاحظات إضافية</h2>
-                    
-                    <div class="form-group">
-                        <label for="additionalNotes">ملاحظات إضافية</label>
-                        <textarea id="additionalNotes" class="form-control" rows="4" placeholder="أي ملاحظات إضافية تود إضافتها حول حالتك أو احتياجاتك الخاصة"></textarea>
                     </div>
                 </div>
                 
@@ -1553,16 +1505,33 @@
         
         // إعداد مستمعي الأحداث
         function setupEventListeners() {
-            // التحكم في قسم الأجهزة المساعدة
-            const usesAssistiveDevices = document.getElementById('usesAssistiveDevices');
-            const assistiveDevicesSection = document.getElementById('assistiveDevicesSection');
+            // التحكم في قسم راتب الرعاية
+            const hasWelfareSalary = document.getElementById('hasWelfareSalary');
+            const welfareSalarySection = document.getElementById('welfareSalarySection');
             
-            usesAssistiveDevices.addEventListener('change', function() {
-                if (this.value === 'نعم') {
-                    assistiveDevicesSection.style.display = 'block';
+            hasWelfareSalary.addEventListener('change', function() {
+                if (this.value === 'لا') {
+                    welfareSalarySection.style.display = 'block';
+                    document.getElementById('welfareSalaryReason').required = true;
                 } else {
-                    assistiveDevicesSection.style.display = 'none';
-                    document.getElementById('assistiveDevices').value = '';
+                    welfareSalarySection.style.display = 'none';
+                    document.getElementById('welfareSalaryReason').required = false;
+                    document.getElementById('welfareSalaryReason').value = '';
+                }
+            });
+            
+            // التحكم في قسم الراتب المعين
+            const hasSpecificSalary = document.getElementById('hasSpecificSalary');
+            const specificSalarySection = document.getElementById('specificSalarySection');
+            
+            hasSpecificSalary.addEventListener('change', function() {
+                if (this.value === 'لا') {
+                    specificSalarySection.style.display = 'block';
+                    document.getElementById('specificSalaryReason').required = true;
+                } else {
+                    specificSalarySection.style.display = 'none';
+                    document.getElementById('specificSalaryReason').required = false;
+                    document.getElementById('specificSalaryReason').value = '';
                 }
             });
         }
@@ -1579,7 +1548,11 @@
                 
                 // عند تغيير الملف
                 fileInput.addEventListener('change', function(e) {
-                    handleFileUpload(e.target.files[0], dataType, preview, box);
+                    if (dataType === 'additionalDocs') {
+                        handleMultipleFileUpload(e.target.files, dataType, preview, box);
+                    } else {
+                        handleFileUpload(e.target.files[0], dataType, preview, box);
+                    }
                 });
                 
                 // تفعيل سحب وإفلات الملفات
@@ -1595,8 +1568,13 @@
                 box.addEventListener('drop', function(e) {
                     e.preventDefault();
                     box.classList.remove('dragover');
-                    const file = e.dataTransfer.files[0];
-                    handleFileUpload(file, dataType, preview, box);
+                    const files = e.dataTransfer.files;
+                    
+                    if (dataType === 'additionalDocs') {
+                        handleMultipleFileUpload(files, dataType, preview, box);
+                    } else {
+                        handleFileUpload(files[0], dataType, preview, box);
+                    }
                 });
             });
         }
@@ -1607,15 +1585,13 @@
             
             // التحقق من حجم الملف (5MB كحد أقصى)
             if (file.size > 5 * 1024 * 1024) {
-                alert('حجم الملف كبير جداً! الحد الأقصى 5MB');
-                return;
+                return; // لا تظهر رسالة
             }
             
             // التحقق من نوع الملف
             if (!file.type.match('image.*') && !file.type.match('application/pdf') && 
                 !file.type.match('application/msword') && !file.type.match('application/vnd.openxmlformats-officedocument.wordprocessingml.document')) {
-                alert('نوع الملف غير مدعوم! يرجى رفع صورة أو ملف PDF أو Word');
-                return;
+                return; // لا تظهر رسالة
             }
             
             // إنشاء معاينة للملف
@@ -1650,11 +1626,7 @@
                 preview.style.display = 'block';
                 
                 // تخزين الملف مؤقتاً
-                if (type === 'additionalDocs') {
-                    uploadedFiles[type].push(file);
-                } else {
-                    uploadedFiles[type] = file;
-                }
+                uploadedFiles[type] = file;
                 
                 // تغيير لون صندوق الرفع للإشارة إلى الرفع الناجح
                 box.style.borderColor = '#2ecc71';
@@ -1668,13 +1640,59 @@
             reader.readAsDataURL(file);
         }
         
+        // معالجة رفع ملفات متعددة
+        function handleMultipleFileUpload(files, type, preview, box) {
+            if (!files || files.length === 0) return;
+            
+            preview.innerHTML = '';
+            uploadedFiles[type] = [];
+            
+            for (let i = 0; i < Math.min(files.length, 5); i++) {
+                const file = files[i];
+                
+                // التحقق من حجم الملف (5MB كحد أقصى)
+                if (file.size > 5 * 1024 * 1024) continue;
+                
+                // التحقق من نوع الملف
+                if (!file.type.match('image.*') && !file.type.match('application/pdf') && 
+                    !file.type.match('application/msword') && !file.type.match('application/vnd.openxmlformats-officedocument.wordprocessingml.document')) {
+                    continue;
+                }
+                
+                uploadedFiles[type].push(file);
+                
+                const fileInfo = document.createElement('div');
+                fileInfo.className = 'file-info';
+                fileInfo.style.marginBottom = '10px';
+                fileInfo.style.padding = '8px';
+                fileInfo.style.backgroundColor = '#f8f9fa';
+                fileInfo.style.borderRadius = '5px';
+                fileInfo.innerHTML = `
+                    <div>
+                        <div class="file-name">${file.name.substring(0, 30)}${file.name.length > 30 ? '...' : ''}</div>
+                        <div class="file-size">${formatFileSize(file.size)}</div>
+                    </div>
+                    <div class="remove-file" onclick="removeSingleFile('${type}', ${i})">
+                        <i class="fas fa-times"></i>
+                    </div>
+                `;
+                
+                preview.appendChild(fileInfo);
+            }
+            
+            if (uploadedFiles[type].length > 0) {
+                preview.style.display = 'block';
+                box.style.borderColor = '#2ecc71';
+                box.style.borderStyle = 'solid';
+                
+                const fileInput = box.querySelector('input[type="file"]');
+                fileInput.value = '';
+            }
+        }
+        
         // إزالة ملف
         function removeFile(type) {
-            if (type === 'additionalDocs') {
-                uploadedFiles[type] = [];
-            } else {
-                uploadedFiles[type] = null;
-            }
+            uploadedFiles[type] = null;
             
             const preview = document.getElementById(`${type}Preview`);
             const box = document.querySelector(`[data-type="${type}"]`);
@@ -1683,6 +1701,43 @@
             preview.innerHTML = '';
             box.style.borderColor = '#e1e5eb';
             box.style.borderStyle = 'dashed';
+        }
+        
+        // إزالة ملف واحد من الملفات المتعددة
+        function removeSingleFile(type, index) {
+            if (uploadedFiles[type] && uploadedFiles[type].length > index) {
+                uploadedFiles[type].splice(index, 1);
+                
+                const preview = document.getElementById(`${type}Preview`);
+                if (uploadedFiles[type].length === 0) {
+                    preview.style.display = 'none';
+                    preview.innerHTML = '';
+                    const box = document.querySelector(`[data-type="${type}"]`);
+                    box.style.borderColor = '#e1e5eb';
+                    box.style.borderStyle = 'dashed';
+                } else {
+                    // إعادة بناء المعاينة
+                    preview.innerHTML = '';
+                    uploadedFiles[type].forEach((file, i) => {
+                        const fileInfo = document.createElement('div');
+                        fileInfo.className = 'file-info';
+                        fileInfo.style.marginBottom = '10px';
+                        fileInfo.style.padding = '8px';
+                        fileInfo.style.backgroundColor = '#f8f9fa';
+                        fileInfo.style.borderRadius = '5px';
+                        fileInfo.innerHTML = `
+                            <div>
+                                <div class="file-name">${file.name.substring(0, 30)}${file.name.length > 30 ? '...' : ''}</div>
+                                <div class="file-size">${formatFileSize(file.size)}</div>
+                            </div>
+                            <div class="remove-file" onclick="removeSingleFile('${type}', ${i})">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        `;
+                        preview.appendChild(fileInfo);
+                    });
+                }
+            }
         }
         
         // تنسيق حجم الملف
@@ -1726,7 +1781,6 @@
                 console.log("تم تسجيل الدخول كضيف");
             } catch (error) {
                 console.error("خطأ في المصادقة:", error);
-                showDBError("خطأ في الاتصال بالنظام. يرجى المحاولة مرة أخرى.");
             }
         }
         
@@ -1749,15 +1803,6 @@
         // إخفاء تحميل
         function hideLoading() {
             document.getElementById('loading').style.display = 'none';
-        }
-        
-        // عرض خطأ قاعدة البيانات
-        function showDBError(message) {
-            document.getElementById('dbErrorText').textContent = message;
-            document.getElementById('dbErrorAlert').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('dbErrorAlert').style.display = 'none';
-            }, 5000);
         }
         
         // عرض نموذج البحث
@@ -1790,7 +1835,8 @@
             
             // مسح النموذج
             document.getElementById('dataForm').reset();
-            document.getElementById('assistiveDevicesSection').style.display = 'none';
+            document.getElementById('welfareSalarySection').style.display = 'none';
+            document.getElementById('specificSalarySection').style.display = 'none';
             document.getElementById('successAlert').style.display = 'none';
             document.getElementById('errorAlert').style.display = 'none';
             document.getElementById('dbErrorAlert').style.display = 'none';
@@ -1870,7 +1916,6 @@
             const searchName = document.getElementById('searchByName').value.trim();
             
             if (!searchId && !searchName) {
-                alert('يرجى إدخال رقم الطلب أو الاسم للبحث');
                 return;
             }
             
@@ -1936,7 +1981,7 @@
             // عرض التفاصيل
             document.getElementById('resultDetails').innerHTML = `
                 <div class="result-item">
-                    <div class="result-label">الاسم الثلاثي</div>
+                    <div class="result-label">الاسم الرباعي</div>
                     <div class="result-value">${request.fullName}</div>
                 </div>
                 
@@ -1951,12 +1996,12 @@
                 </div>
                 
                 <div class="result-item">
-                    <div class="result-label">نوع الإعاقة</div>
+                    <div class="result-label">نوع العوق</div>
                     <div class="result-value">${request.disabilityType}</div>
                 </div>
                 
                 <div class="result-item">
-                    <div class="result-label">درجة الإعاقة</div>
+                    <div class="result-label">درجة العوق</div>
                     <div class="result-value">${request.disabilityLevel}</div>
                 </div>
                 
@@ -2023,7 +2068,6 @@
                         fileUrls[key] = downloadURL;
                     } catch (error) {
                         console.error(`خطأ في رفع الملف ${key}:`, error);
-                        throw new Error(`فشل رفع الملف: ${file.name}`);
                     }
                 }
             }
@@ -2055,11 +2099,11 @@
             // التحقق من الحقول المطلوبة
             const requiredFields = [
                 'fullName', 'motherName', 'birthDate', 'governorate', 
-                'district', 'phone', 'familyMembers', 'educationLevel',
-                'disabilityType', 'disabilityLevel', 'disabilityAcquired', 
-                'hasDisabilityCard', 'needsTreatment', 'usesAssistiveDevices', 
-                'needsCompanion', 'maritalStatus', 'currentlyWorking', 
-                'hasIncome', 'wantsToWork', 'supportType'
+                'district', 'phone1', 'landmark', 'relationshipDegree',
+                'appointedName', 'isEmployee', 'isRetired', 'maritalStatus',
+                'educationLevel', 'supportType', 'disabilityType', 
+                'disabilityLevel', 'disabilityAcquired', 'hasWelfareSalary', 
+                'hasSpecificSalary'
             ];
             
             let isValid = true;
@@ -2075,19 +2119,28 @@
             }
             
             // التحقق من صحة رقم الهاتف
-            const phone = document.getElementById('phone').value;
+            const phone1 = document.getElementById('phone1').value;
             const phonePattern = /^07[0-9]{9}$/;
-            if (!phonePattern.test(phone)) {
+            if (!phonePattern.test(phone1)) {
                 isValid = false;
-                document.getElementById('phone').style.borderColor = '#e74c3c';
-                alert('يرجى إدخال رقم هاتف عراقي صحيح (07xxxxxxxxx)');
+                document.getElementById('phone1').style.borderColor = '#e74c3c';
             }
             
-            // التحقق من رفع الملفات المطلوبة
-            if (!uploadedFiles.nationalIdFront || !uploadedFiles.nationalIdBack || 
-                !uploadedFiles.housingCardFront || !uploadedFiles.housingCardBack) {
-                isValid = false;
-                alert('يرجى رفع جميع الصور المطلوبة (البطاقة الوطنية وبطاقة السكن من الجهتين)');
+            // التحقق من حقول الشرطية
+            if (document.getElementById('hasWelfareSalary').value === 'لا') {
+                const welfareReason = document.getElementById('welfareSalaryReason').value;
+                if (!welfareReason.trim()) {
+                    isValid = false;
+                    document.getElementById('welfareSalaryReason').style.borderColor = '#e74c3c';
+                }
+            }
+            
+            if (document.getElementById('hasSpecificSalary').value === 'لا') {
+                const specificReason = document.getElementById('specificSalaryReason').value;
+                if (!specificReason.trim()) {
+                    isValid = false;
+                    document.getElementById('specificSalaryReason').style.borderColor = '#e74c3c';
+                }
             }
             
             // إذا كانت البيانات صحيحة
@@ -2098,10 +2151,7 @@
                 const requestNumber = generateRequestId();
                 
                 try {
-                    // رفع الملفات أولاً
-                    const fileUrls = await uploadFiles(requestNumber);
-                    
-                    // تجميع البيانات
+                    // تجميع البيانات (دون رفع الملفات)
                     const formData = {
                         requestNumber: requestNumber,
                         // المعلومات الشخصية
@@ -2111,41 +2161,39 @@
                         gender: document.getElementById('gender').value,
                         governorate: document.getElementById('governorate').value,
                         district: document.getElementById('district').value,
-                        phone: document.getElementById('phone').value,
-                        email: document.getElementById('email').value || '',
+                        phone1: document.getElementById('phone1').value,
+                        phone2: document.getElementById('phone2').value || '',
+                        landmark: document.getElementById('landmark').value,
                         
-                        // معلومات الإعاقة
+                        // معلومات العوق
                         disabilityType: document.getElementById('disabilityType').value,
                         disabilityLevel: document.getElementById('disabilityLevel').value,
                         disabilityAcquired: document.getElementById('disabilityAcquired').value,
-                        hasDisabilityCard: document.getElementById('hasDisabilityCard').value,
                         
-                        // الحالة الصحية
-                        needsTreatment: document.getElementById('needsTreatment').value,
-                        usesAssistiveDevices: document.getElementById('usesAssistiveDevices').value,
-                        assistiveDevices: document.getElementById('assistiveDevices')?.value || '',
-                        needsCompanion: document.getElementById('needsCompanion').value,
+                        // معلومات الراتب
+                        hasWelfareSalary: document.getElementById('hasWelfareSalary').value,
+                        welfareSalaryReason: document.getElementById('welfareSalaryReason')?.value || '',
+                        hasSpecificSalary: document.getElementById('hasSpecificSalary').value,
+                        specificSalaryReason: document.getElementById('specificSalaryReason')?.value || '',
                         
-                        // الحالة الاجتماعية والاقتصادية
+                        // العلاقة والوصاية
+                        relationshipDegree: document.getElementById('relationshipDegree').value,
+                        appointedName: document.getElementById('appointedName').value,
+                        isEmployee: document.getElementById('isEmployee').value,
+                        isRetired: document.getElementById('isRetired').value,
+                        
+                        // الحالة الاجتماعية والتعليمية
                         maritalStatus: document.getElementById('maritalStatus').value,
-                        currentlyWorking: document.getElementById('currentlyWorking').value,
-                        hasIncome: document.getElementById('hasIncome').value,
-                        familyMembers: parseInt(document.getElementById('familyMembers').value),
-                        
-                        // المستوى التعليمي والمهني
                         educationLevel: document.getElementById('educationLevel').value,
-                        wantsToWork: document.getElementById('wantsToWork').value,
-                        suitableWork: document.getElementById('suitableWork').value || '',
                         
                         // نوع الدعم المطلوب
                         supportType: document.getElementById('supportType').value,
-                        supportDetails: document.getElementById('supportDetails')?.value || '',
                         
-                        // روابط الملفات
-                        fileUrls: fileUrls,
-                        
-                        // ملاحظات إضافية
+                        // ملاحظات
                         additionalNotes: document.getElementById('additionalNotes').value || '',
+                        
+                        // روابط الملفات (سيتم رفعها لاحقاً إذا لزم الأمر)
+                        hasUploadedFiles: false,
                         
                         // معلومات النظام
                         submissionDate: firebase.firestore.FieldValue.serverTimestamp(),
@@ -2153,16 +2201,40 @@
                         rejectReason: ''
                     };
                     
-                    // حفظ البيانات في Firestore
+                    // حفظ البيانات في Firestore (دون الملفات)
                     const docRef = await db.collection('disability_requests').add(formData);
                     console.log("تم حفظ الطلب بنجاح، المعرف:", docRef.id);
                     
-                    // إظهار شاشة التأكيد
+                    // محاولة رفع الملفات في الخلفية (بدون انتظار)
+                    setTimeout(async () => {
+                        try {
+                            // محاولة رفع الملفات
+                            const fileUrls = await uploadFiles(requestNumber);
+                            
+                            // تحديث السجل بإضافة روابط الملفات إذا تم رفعها
+                            if (Object.keys(fileUrls).length > 0) {
+                                await db.collection('disability_requests').doc(docRef.id).update({
+                                    fileUrls: fileUrls,
+                                    hasUploadedFiles: true
+                                });
+                                console.log("تم تحديث الطلب بروابط الملفات");
+                            }
+                        } catch (uploadError) {
+                            console.error("خطأ في رفع الملفات:", uploadError);
+                            // لا نوقف العملية إذا فشل رفع الملفات
+                        }
+                    }, 0);
+                    
+                    // إظهار شاشة التأكيد فوراً (دون انتظار رفع الملفات)
                     showConfirmationScreen(requestNumber);
                     
                 } catch (error) {
                     console.error("خطأ في حفظ البيانات:", error);
-                    showDBError("حدث خطأ أثناء حفظ البيانات. يرجى المحاولة مرة أخرى.");
+                    document.getElementById('errorAlert').style.display = 'block';
+                    
+                    setTimeout(() => {
+                        document.getElementById('errorAlert').style.display = 'none';
+                    }, 5000);
                 } finally {
                     hideLoading();
                 }
